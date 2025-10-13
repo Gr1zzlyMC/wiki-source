@@ -1,0 +1,3 @@
+Final test to verify the git-remote-mediawiki workflow is working correctly.
+This should successfully sync to MediaWiki now!
+
