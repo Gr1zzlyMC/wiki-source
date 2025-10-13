@@ -1350,37 +1350,54 @@ span.mwe-math-mathml-inline {
 
 
 /* Sidebar background */
-.drawer.menu {
+.drawer.menu,
+.skin-vector-2022 .vector-main-menu,
+.skin-vector-2022 .vector-main-menu-container,
+.skin-vector-2022 .vector-page-tools,
+.skin-vector-2022 .vector-toc,
+.skin-vector-2022 .vector-sticky-header {
   background-color: #111 !important;
   color: #fff !important;
 }
 
 /* Sidebar link styles */
-.drawer.menu .menu ul li a {
+.drawer.menu .menu ul li a,
+.skin-vector-2022 .vector-main-menu .vector-menu-content a,
+.skin-vector-2022 .vector-page-tools .vector-menu-content a,
+.skin-vector-2022 .vector-toc .vector-toc-text {
   color: #fff !important;
   font-weight: 500;
   padding: 12px 20px !important;
 }
 
 /* Sidebar icons */
-.drawer.menu .menu ul li a .mw-ui-icon {
+.drawer.menu .menu ul li a .mw-ui-icon,
+.skin-vector-2022 .vector-main-menu .vector-menu-content .mw-ui-icon,
+.skin-vector-2022 .vector-page-tools .vector-menu-content .mw-ui-icon {
   filter: brightness(0) invert(1) !important; /* makes icons white */
 }
 
 /* Hover effect */
-.drawer.menu .menu ul li a:hover {
+.drawer.menu .menu ul li a:hover,
+.skin-vector-2022 .vector-main-menu .vector-menu-content a:hover,
+.skin-vector-2022 .vector-page-tools .vector-menu-content a:hover {
   background-color: #1a1a1a !important;
   color: #f4c542 !important; /* Hypixel gold accent */
 }
 
 /* Active/highlighted link */
-.drawer.menu .menu ul li.selected a {
+.drawer.menu .menu ul li.selected a,
+.skin-vector-2022 .vector-main-menu .vector-menu-content a:focus,
+.skin-vector-2022 .vector-main-menu .vector-menu-content a:active,
+.skin-vector-2022 .vector-page-tools .vector-menu-content a:focus,
+.skin-vector-2022 .vector-page-tools .vector-menu-content a:active {
   background-color: #222 !important;
   color: #f4c542 !important;
 }
 
 /* Bottom links (About, Disclaimers) */
-.drawer.menu footer {
+.drawer.menu footer,
+.skin-vector-2022 .vector-main-menu footer {
   border-top: 1px solid #333 !important;
   color: #ccc !important;
 }
@@ -1430,6 +1447,9 @@ pre, code {
 .mw-footer .mw-footer-nav,
 .vector-footer,
 .vector-footer-container,
+.skin-vector-2022 .vector-footer,
+.skin-vector-2022 .vector-footer-container,
+.skin-vector-2022 .mw-footer,
 footer.minerva-footer {
   background: #111 !important;
   border-top: 1px solid #222 !important;
@@ -1440,6 +1460,8 @@ footer.minerva-footer {
 #footer a,
 .mw-footer a,
 .vector-footer a,
+.skin-vector-2022 .vector-footer a,
+.skin-vector-2022 .mw-footer a,
 footer.minerva-footer a {
   color: #9ac7ff !important;
 }
