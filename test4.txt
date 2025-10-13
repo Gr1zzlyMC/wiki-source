@@ -1,0 +1,3 @@
+Testing the corrected git-remote-mediawiki installation.
+This should now properly download the script and sync to MediaWiki!
+
