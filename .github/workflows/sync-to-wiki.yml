@@ -13,11 +13,22 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libmediawiki-api-perl libdatetime-format-iso8601-perl
           # Download the script directly from GitHub
+          echo "Downloading git-remote-mediawiki..."
           curl -fsSL https://raw.githubusercontent.com/git/git/master/contrib/mw-to-git/git-remote-mediawiki.perl -o /tmp/git-remote-mediawiki
-          # Verify it's actually a Perl script
+          # Verify it downloaded
+          if [ ! -f /tmp/git-remote-mediawiki ]; then
+            echo "ERROR: Failed to download script"
+            exit 1
+          fi
+          echo "First line of script:"
           head -n 1 /tmp/git-remote-mediawiki
+          # Install it
           sudo mv /tmp/git-remote-mediawiki /usr/local/bin/git-remote-mediawiki
           sudo chmod +x /usr/local/bin/git-remote-mediawiki
+          # Verify installation
+          echo "Verifying installation..."
+          ls -l /usr/local/bin/git-remote-mediawiki
+          which git-remote-mediawiki || echo "Warning: not in PATH, but should work anyway"
 
       - name: Preflight API check
         env:
