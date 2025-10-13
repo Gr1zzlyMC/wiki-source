@@ -1349,13 +1349,6 @@ span.mwe-math-mathml-inline {
 }
 
 
-.minerva-header .branding-box a {
-  display:inline-block; width:140px; height:40px;
-  background:url(https://wiki.2bz.org/images/2bZ.png) no-repeat left center;
-  background-size:contain; font-size:0; color:transparent;
-}
-
-
 /* Sidebar background */
 .drawer.menu {
   background-color: #111 !important;
@@ -1428,8 +1421,25 @@ pre, code {
 }
 
 /* Category / footer boxes */
-.catlinks, #footer, .printfooter {
+.catlinks,
+#footer,
+.printfooter,
+.mw-footer,
+.mw-footer-container,
+.mw-footer .mw-footer-license,
+.mw-footer .mw-footer-nav,
+.vector-footer,
+.vector-footer-container,
+footer.minerva-footer {
   background: #111 !important;
   border-top: 1px solid #222 !important;
   color: #aaa !important;
+}
+
+/* Footer links */
+#footer a,
+.mw-footer a,
+.vector-footer a,
+footer.minerva-footer a {
+  color: #9ac7ff !important;
 }
