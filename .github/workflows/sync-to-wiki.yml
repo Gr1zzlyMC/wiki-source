@@ -26,5 +26,15 @@ jobs:
         run: |
           git config user.name "GitHub CI"
           git config user.email "ci@example.org"
-          git remote add wiki "mediawiki::https://${WIKI_USER}:${WIKI_PASS}@${WIKI_API#https://}"
+          scheme="${WIKI_API%%://*}"
+          rest="${WIKI_API#*://}"
+          if [ "$scheme" = "$WIKI_API" ] || [ -z "$scheme" ]; then
+            scheme="https"
+          fi
+          rest="${rest%%\?*}"
+          rest="${rest%%#*}"
+          rest="${rest%/api.php}"
+          rest="${rest%/index.php}"
+          rest="${rest%/}"
+          git remote add wiki "mediawiki::${scheme}://${WIKI_USER}:${WIKI_PASS}@${rest}"
           git push wiki HEAD
