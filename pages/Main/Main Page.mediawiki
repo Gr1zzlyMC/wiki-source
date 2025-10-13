@@ -1,11 +1,47 @@
 <!-- Page: Main Page -->
-<strong>MediaWiki has been successfully installed and is now live!</strong>
+= Welcome to the Server Wiki =
 
-Consult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User's Guide] for information on using the wiki software.
+Welcome to the central knowledge hub for our community server! This wiki collects everything you need to know about the world we share, from day-to-day guidelines to deep dives on advanced gameplay systems. Whether you are brand new or a long-time veteran, you will find curated articles that keep you in the loop and ready for your next session.
 
-== Getting started ==
-* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings Configuration settings list]
-* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]
-* [https://lists.wikimedia.org/postorius/lists/mediawiki-announce.lists.wikimedia.org/ MediaWiki release mailing list]
-* [https://www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources Localise MediaWiki for your language]
-* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam Learn how to combat spam on your wiki]
+__NOTOC__
+
+== Quick Links ==
+* [[Server Rules|Server rules and etiquette]]
+* [[Getting Started|New player onboarding guide]]
+* [[World Map|Interactive world map and points of interest]]
+* [[Plugins and Mods|Installed plugins, datapacks, and configuration notes]]
+* [[FAQ|Frequently asked questions]]
+
+== Community Spotlight ==
+; Featured Build
+: Explore the latest community megaproject, learn about the creators, and discover the inspiration behind the design. Add your own build to the [[Build Showcase]] to share screenshots, coordinates, and tips.
+; Player of the Week
+: Each week we highlight a member who embodies the spirit of the server. Nominate someone on the [[Community Events]] page and celebrate their contributions.
+
+== Server Status & Maintenance ==
+* **Current Version:** [[Server Version|1.20.4 Survival]]
+* **Scheduled Downtime:** Check [[Maintenance Calendar]] for patch windows, restart schedules, and planned events.
+* **Reporting Issues:** Visit [[Support Tickets]] to open a request for staff assistance or bug reporting.
+
+== Guides & Tutorials ==
+{| class="wikitable"
+! Topic !! Summary !! Start Here
+|-
+| Survival Basics || Learn how to claim land, protect builds, and access shared resources. || [[Survival Guide]]
+|-
+| Economy & Trading || Understand shops, currency, and auction commands. || [[Economy Guide]]
+|-
+| Redstone & Automation || Automation tips tailored to server rules and performance best practices. || [[Redstone Handbook]]
+|-
+| Creative Plots || Tips for designing, collaborating, and exporting builds. || [[Creative Mode]]
+|}
+
+== Recent Updates ==
+* '''2024-04-02''' – Spring Update launched with refreshed spawn area, new quest lines, and updated economy balance. See [[Patch Notes/2024-04-02]].
+* '''2024-03-18''' – Added anti-griefing enhancements and expanded claim limits. Review the [[Protection Guide]] for details.
+* '''2024-03-01''' – Community event calendar now live with automated reminders. Subscribe via [[Community Events#Calendar]].
+
+== Need Help? ==
+If you cannot find what you are looking for, ask in the [[Help Desk]] or reach out to staff on the [[Support Tickets|support page]]. You can also join the Discord server linked in the [[Community Portal]] for real-time assistance.
+
+Happy exploring, and thank you for being part of our server family!
