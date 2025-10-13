@@ -14,7 +14,7 @@ jobs:
           sudo apt-get install -y libmediawiki-api-perl libdatetime-format-iso8601-perl
           # Download the script directly from GitHub
           echo "Downloading git-remote-mediawiki..."
-          curl -fsSL https://raw.githubusercontent.com/git/git/master/contrib/mw-to-git/git-remote-mediawiki.perl -o /tmp/git-remote-mediawiki
+          curl -fsSL https://raw.githubusercontent.com/Git-Mediawiki/Git-Mediawiki/master/git-remote-mediawiki -o /tmp/git-remote-mediawiki
           # Verify it downloaded
           if [ ! -f /tmp/git-remote-mediawiki ]; then
             echo "ERROR: Failed to download script"
