@@ -12,13 +12,10 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libmediawiki-api-perl libdatetime-format-iso8601-perl
-          # Clone git source and copy git-remote-mediawiki
-          git clone --depth 1 --no-checkout --filter=blob:none https://github.com/git/git.git /tmp/git-source
-          cd /tmp/git-source
-          git sparse-checkout init --cone
-          git sparse-checkout set contrib/mw-to-git
-          git checkout
-          sudo cp contrib/mw-to-git/git-remote-mediawiki.perl /usr/local/bin/git-remote-mediawiki
+          # Clone git source (just the parts we need)
+          git clone --depth 1 https://github.com/git/git.git /tmp/git-source
+          ls -la /tmp/git-source/contrib/mw-to-git/
+          sudo cp /tmp/git-source/contrib/mw-to-git/git-remote-mediawiki.perl /usr/local/bin/git-remote-mediawiki
           sudo chmod +x /usr/local/bin/git-remote-mediawiki
           # Verify it was installed correctly
           head -n 1 /usr/local/bin/git-remote-mediawiki
