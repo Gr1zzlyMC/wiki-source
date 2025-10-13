@@ -11,7 +11,10 @@ jobs:
       - name: Install git-remote-mediawiki
         run: |
           sudo apt-get update
-          sudo apt-get install -y git-mediawiki
+          sudo apt-get install -y libmediawiki-api-perl libdatetime-format-iso8601-perl
+          curl -o git-remote-mediawiki.perl https://raw.githubusercontent.com/git/git/master/contrib/mw-to-git/git-remote-mediawiki.perl
+          chmod +x git-remote-mediawiki.perl
+          sudo cp git-remote-mediawiki.perl /usr/local/bin/git-remote-mediawiki
 
       - name: Preflight API check
         env:
