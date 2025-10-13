@@ -1,0 +1,17 @@
+<!-- Page: MediaWiki:Mobile.css -->
+/* Replace "My Wiki" with a logo in Minerva */
+.minerva-header .header-title { 
+  font-size: 0 !important;          /* hides the text reliably */
+  line-height: 0 !important;
+}
+
+.minerva-header .header-title::before {
+  content: "";
+  display: inline-block;
+  width: 140px;                      /* adjust */
+  height: 40px;                      /* adjust */
+  background-image: url("https://wiki.2bz.org/images/2bZ.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+}
