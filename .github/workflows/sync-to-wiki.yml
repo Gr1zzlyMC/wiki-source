@@ -43,6 +43,7 @@ jobs:
         run: |
           git config user.name "GitHub CI"
           git config user.email "ci@example.org"
+          # Extract base URL from WIKI_API
           scheme="${WIKI_API%%://*}"
           rest="${WIKI_API#*://}"
           if [ "$scheme" = "$WIKI_API" ] || [ -z "$scheme" ]; then
@@ -53,5 +54,9 @@ jobs:
           rest="${rest%/api.php}"
           rest="${rest%/index.php}"
           rest="${rest%/}"
-          git remote add wiki "mediawiki::${scheme}://${WIKI_USER}:${WIKI_PASS}@${rest}"
+          # Configure credentials via git config (not in URL)
+          git config --global mediawiki.username "$WIKI_USER"
+          git config --global mediawiki.password "$WIKI_PASS"
+          # Add remote without credentials in URL
+          git remote add wiki "mediawiki::${scheme}://${rest}"
           git push wiki main:master
