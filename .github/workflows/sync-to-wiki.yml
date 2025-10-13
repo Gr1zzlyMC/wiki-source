@@ -1,0 +1,21 @@
+name: Sync to MediaWiki
+on:
+  push:
+    branches: [ main ]
+jobs:
+  push-wiki:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install git-remote-mediawiki
+        run: sudo apt-get update && sudo apt-get install -y git-mediawiki
+      - name: Push to MediaWiki
+        env:
+          WIKI_USER: ${{ secrets.WIKI_USER }}
+          WIKI_PASS: ${{ secrets.WIKI_PASS }}
+          WIKI_API:  ${{ secrets.WIKI_API }}
+        run: |
+          git config user.name "GitHub CI"
+          git config user.email "ci@example.org"
+          git remote add wiki "mediawiki::https://${WIKI_USER}:${WIKI_PASS}@${WIKI_API#https://}"
+          git push wiki HEAD
