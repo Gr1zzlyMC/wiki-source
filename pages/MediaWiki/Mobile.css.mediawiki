@@ -1,6 +1,6 @@
 <!-- Page: MediaWiki:Mobile.css -->
 /* Replace "My Wiki" with a logo in Minerva */
-.minerva-header .header-title { 
+.minerva-header .header-title {
   font-size: 0 !important;          /* hides the text reliably */
   line-height: 0 !important;
 }

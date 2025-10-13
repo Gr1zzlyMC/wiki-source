@@ -5,6 +5,7 @@ body.skin-minerva .minerva-header {
   height: 64px !important;
   display: flex !important;
   align-items: center !important;
+  justify-content: space-between !important;
   padding: 0 20px !important;
   border-bottom: 1px solid #111 !important;
 }
@@ -23,62 +24,8 @@ body.skin-minerva .minerva-header .main-menu-button {
 
 /* Search bar styling */
 body.skin-minerva .minerva-header #searchInput {
-  background-color: #111 !important;
-  color: #fff !important;
-  border: 1px solid #333 !important;
-  padding: 8px 12px !important;
-  border-radius: 6px !important;
+  height: 36px !important;
   width: 280px !important;
-}
-
-/* Header icons (bell, user) */
-body.skin-minerva .minerva-header .minerva-icon {
-  filter: brightness(0) invert(1) !important;
-  margin-left: 20px !important;
-}
-
-/* Logo image fix if using background logo */
-body.skin-minerva .branding-box a {
-  display: inline-block !important;
-  width: 120px !important;
-  height: 40px !important;
-  background: url("https://wiki.2bz.org/images/2bZ.png") no-repeat center !important;
-  background-size: contain !important;
-  font-size: 0 !important;
-}
-
-/* Adjust header height and padding */
-body.skin-minerva .minerva-header {
-  height: 64px !important;
-  padding: 0 20px !important;
-  background-color: #000 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  border-bottom: 1px solid #111 !important;
-}
-
-/* Align the hamburger + logo */
-body.skin-minerva .branding-box,
-body.skin-minerva #mw-mf-main-menu-button {
-  display: flex !important;
-  align-items: center !important;
-  margin-right: 16px !important;
-}
-
-/* Replace logo text with your image */
-body.skin-minerva .branding-box a {
-  display: inline-block !important;
-  width: 120px !important;
-  height: 36px !important;
-  background: url("https://wiki.2bz.org/images/2bZ.png") no-repeat center !important;
-  background-size: contain !important;
-  text-indent: -9999px !important;
-}
-
-/* Style search box */
-body.skin-minerva .minerva-header #searchInput {
-  height: 36px !important;
   background: #111 !important;
   color: #fff !important;
   border: 1px solid #333 !important;
@@ -91,20 +38,46 @@ body.skin-minerva .minerva-header .minerva-icon {
   filter: invert(1) brightness(1.2) !important;
   margin-left: 20px !important;
 }
+
+/* Logo image fix if using background logo */
+body.skin-minerva .branding-box a {
+  display: inline-block !important;
+  width: 120px !important;
+  height: 40px !important;
+  background: url("https://wiki.2bz.org/images/2bZ.png") no-repeat center !important;
+  background-size: contain !important;
+  font-size: 0 !important;
+  text-indent: -9999px !important;
+}
+
+/* Align the hamburger + logo */
+body.skin-minerva .branding-box,
+body.skin-minerva #mw-mf-main-menu-button {
+  display: flex !important;
+  align-items: center !important;
+  margin-right: 16px !important;
+}
+
 body.skin-minerva {
   background: #0b0b0b !important;
   color: #e0e0e0 !important;
 }
-body.skin-minerva a { color: #4da3ff !important; }
+
+body.skin-minerva a {
+  color: #4da3ff !important;
+}
+
 body.skin-minerva .content {
   background: #121212 !important;
   border: none !important;
   color: #e0e0e0 !important;
 }
+
 body.skin-minerva .mw-parser-output table {
   background: #1a1a1a !important;
   border-color: #333 !important;
 }
+
 body.skin-minerva pre,
 body.skin-minerva code {
   background: #1f1f1f !important;
