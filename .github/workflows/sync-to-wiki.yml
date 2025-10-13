@@ -4,11 +4,20 @@ on:
     branches: [ main ]
 jobs:
   push-wiki:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04   # <= pin to 22.04
     steps:
       - uses: actions/checkout@v4
+
       - name: Install git-remote-mediawiki
-        run: sudo apt-get update && sudo apt-get install -y git-mediawiki
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git-mediawiki
+
+      - name: Preflight API check
+        env:
+          WIKI_API: ${{ secrets.WIKI_API }}
+        run: curl -fsSL "$WIKI_API?action=query&meta=siteinfo&format=json" >/dev/null
+
       - name: Push to MediaWiki
         env:
           WIKI_USER: ${{ secrets.WIKI_USER }}
